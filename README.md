@@ -1,2 +1,0 @@
-# redux-todo
-redux-todo
