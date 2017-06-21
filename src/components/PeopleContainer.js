@@ -5,8 +5,8 @@ import * as peopleActions from '../actions/people-actions';
 import PeopleList from './PeopleList';
 import PersonInput from './PersonInput';
 import * as todoActions from '../actions/todo-actions';
-import PeopleList from './TodoList';
-import PersonInput from './TodoInput';
+import TodoList from './TodoList';
+import TodoInput from './TodoInput';
 
 class PeopleContainer extends Component {
   constructor(props) {
@@ -49,7 +49,7 @@ function mapStateToProps(state, props) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators([...peopleActions, ...todoActions], dispatch)
+    actions: bindActionCreators({...peopleActions, ...todoActions}, dispatch)
   }
 }
 

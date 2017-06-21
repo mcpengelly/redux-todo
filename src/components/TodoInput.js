@@ -12,8 +12,8 @@ class TodoInput extends Component {
     const description = document.getElementById('description');
 
     this.props.addTodo({
-      title: firstNameElement.value,
-      description: lastNameElement.value
+      title: title.value,
+      description: description.value
     });
 
     title.value = "";
@@ -31,13 +31,13 @@ class TodoInput extends Component {
       <div>
         <input id="title" type="text" placeholder="title" />
         <input id="description" type="text" placeholder="description" />
-        <button onClick={this.onAddTodoClick}>Add Person</button>
+        <button onClick={this.onAddTodoClick}>Add Todo</button>
       </div>
     );
   }
 }
 
-PersonInput.propTypes = {
+TodoInput.propTypes = {
   addTodo: PropTypes.func.isRequired
 };
 
